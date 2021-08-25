@@ -16,5 +16,4 @@ public class RetrofitApi {
         }
         return retrofit;
     }
-
 }

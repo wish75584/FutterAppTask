@@ -2,6 +2,7 @@ package com.example.futterapptask;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -42,7 +43,6 @@ public class MainActivity extends Activity {
                 String mail = et_mail.getText().toString();
                 String pass = et_pass.getText().toString();
 
-
                 //creating object of retrofit
                 Retrofit retrofit = RetrofitApi.getClient();
                 //creating object of retrofit interface
@@ -57,7 +57,6 @@ public class MainActivity extends Activity {
                     public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                         LoginResponse data = response.body();
 
-
                         if (data.getStatus().getStatus_code() == 0) {
 
                             String id = data.getPayload().getUser().get_id();
@@ -70,7 +69,7 @@ public class MainActivity extends Activity {
                             Toast.makeText(MainActivity.this, "id =" + id + "\n\ncreatedAt = " + createdAt + "\n\nstatus_code=" + status_code + "\n\nmessage=" + message + "\n\nname" + name + "\n\nmail" + email + "\n\ntoken ="
                                             + token
                                     , Toast.LENGTH_LONG).show();
-
+                    startActivity(new Intent(MainActivity.this,AllUserDataActivity.class));
                             Log.e("LoginResponse", data.toString() + "LoginResponse");
 
                         } else {
