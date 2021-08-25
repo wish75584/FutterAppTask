@@ -26,5 +26,4 @@ interface RetrofitInterface {
     @GET("api/admin/users")
     Call<List<UserData>> userData(@Header("Authorization") String authHeader);
 
-
 }
