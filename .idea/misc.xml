@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/FutterAppTask/app/src/main/res/layout/activity_all_user_data.xml" value="0.15328947368421053" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FutterAppTask/app/src/main/res/layout/activity_all_user_data.xml" value="0.176" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FutterAppTask/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FutterAppTask/app/src/main/res/layout/layout_search_results.xml" value="0.15328947368421053" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FutterAppTask/app/src/main/res/layout/layout_user_data.xml" value="0.15328947368421053" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/FutterAppTask/app/src/main/res/menu/serach_icon.xml" value="0.15328947368421053" />
       </map>
     </option>
   </component>

@@ -27,6 +27,7 @@ public class MainActivity extends Activity {
     String message;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,11 +67,11 @@ public class MainActivity extends Activity {
                             message = data.getStatus().getMessage();
                             String name = data.getPayload().getUser().getName();
                             String email = data.getPayload().getUser().getEmail();
-                            Toast.makeText(MainActivity.this, "id =" + id + "\n\ncreatedAt = " + createdAt + "\n\nstatus_code=" + status_code + "\n\nmessage=" + message + "\n\nname" + name + "\n\nmail" + email + "\n\ntoken ="
-                                            + token
-                                    , Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(MainActivity.this,AllUserDataActivity.class));
-                            Log.e("LoginResponse", data.toString() + "LoginResponse");
+//                            Toast.makeText(MainActivity.this, "id =" + id + "\n\ncreatedAt = " + createdAt + "\n\nstatus_code=" + status_code + "\n\nmessage=" + message + "\n\nname" + name + "\n\nmail" + email + "\n\ntoken ="
+//                                            + token
+//                                    , Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(MainActivity.this, AllUserDataActivity.class));
+//                            Log.e("LoginResponse", data.toString() + "LoginResponse");
 
                         } else {
                             status_code = data.getStatus().getStatus_code();

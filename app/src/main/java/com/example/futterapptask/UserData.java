@@ -1,28 +1,38 @@
 package com.example.futterapptask;
 
+import com.example.futterapptask.Models.AvailabilityDays;
 import com.example.futterapptask.Models.Meta;
-import com.example.futterapptask.Models.Payload;
+import com.example.futterapptask.Models.MorePayload;
 import com.example.futterapptask.Models.Status;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
 
 public class UserData {
-    private Status status;
+    @SerializedName("payload")
+    List<MorePayload> morePayloads;
 
-    private List<Payload> payload = null;
+    Status status;
+    AvailabilityDays availabilityDays;
+    Meta meta;
+    Root root;
 
-    private Meta meta;
 
-
-    public UserData() {
+    public UserData(List<MorePayload> morePayloads, Status status, AvailabilityDays availabilityDays, Meta meta, Root root) {
+        this.morePayloads = morePayloads;
+        this.status = status;
+        this.availabilityDays = availabilityDays;
+        this.meta = meta;
+        this.root = root;
     }
 
-    public UserData(Status status, List<Payload> payload, Meta meta) {
-        super();
-        this.status = status;
-        this.payload = payload;
-        this.meta = meta;
+    public List<MorePayload> getMorePayloads() {
+        return morePayloads;
+    }
+
+    public void setMorePayloads(List<MorePayload> morePayloads) {
+        this.morePayloads = morePayloads;
     }
 
     public Status getStatus() {
@@ -33,12 +43,12 @@ public class UserData {
         this.status = status;
     }
 
-    public List<Payload> getPayload() {
-        return payload;
+    public AvailabilityDays getAvailabilityDays() {
+        return availabilityDays;
     }
 
-    public void setPayload(List<Payload> payload) {
-        this.payload = payload;
+    public void setAvailabilityDays(AvailabilityDays availabilityDays) {
+        this.availabilityDays = availabilityDays;
     }
 
     public Meta getMeta() {
@@ -47,5 +57,13 @@ public class UserData {
 
     public void setMeta(Meta meta) {
         this.meta = meta;
+    }
+
+    public Root getRoot() {
+        return root;
+    }
+
+    public void setRoot(Root root) {
+        this.root = root;
     }
 }
